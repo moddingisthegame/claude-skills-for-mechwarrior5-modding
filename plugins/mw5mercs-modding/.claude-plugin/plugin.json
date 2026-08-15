@@ -1,0 +1,17 @@
+{
+  "name": "mw5mercs-modding",
+  "displayName": "MW5 Mercenaries + UE4 Modding",
+  "version": "1.0.0",
+  "description": "Reference skills for modding MechWarrior 5: Mercenaries (Mod Editor, mission scripting, campaign integration) and the underlying Unreal Engine 4 (4.23.1) concepts it's built on.",
+  "author": {
+    "name": "moddingisthegame"
+  },
+  "keywords": [
+    "mechwarrior5",
+    "mw5mercs",
+    "unreal-engine-4",
+    "ue4",
+    "modding"
+  ],
+  "license": "MIT"
+}

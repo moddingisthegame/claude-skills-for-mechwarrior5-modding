@@ -1,0 +1,22 @@
+[
+  {"query": "How does parent-class inheritance work for Data-Only Blueprints in UE4?", "should_trigger": true},
+  {"query": "Explain how Gameplay Tags and the Config/Tags ini files work in Unreal Engine 4.", "should_trigger": true},
+  {"query": "What's a Primary Data Asset in UE4 and how does the Asset Manager use it?", "should_trigger": true},
+  {"query": "How do redirectors work when I rename a .uasset in UE4?", "should_trigger": true},
+  {"query": "What UE4 concept is MW5 Mercs' _MRK markup sublevel actually built on?", "should_trigger": true},
+  {"query": "How does the Foliage tool and 'Bake Into Instanced Foliage Actor' work in UE4?", "should_trigger": true},
+  {"query": "Explain Landscape paint layers and Layer Info objects in Unreal Engine 4.27.", "should_trigger": true},
+  {"query": "Why does my duplicated Data Table in UE4 still point at the original source data after I copy it?", "should_trigger": true},
+  {"query": "What UE4 engine feature underlies MW5 Mercs' mods-as-plugins architecture?", "should_trigger": true},
+  {"query": "How does NavMesh Bounds Volume placement work in UE4?", "should_trigger": true},
+  {"query": "How do I create a substitution mod in the MW5 Mercenaries Mod Editor?", "should_trigger": false},
+  {"query": "What are the fields on a Mission Flow Node in MW5 Mercs?", "should_trigger": false},
+  {"query": "Explain Lumen and Nanite in Unreal Engine 5.", "should_trigger": false},
+  {"query": "How does World Partition and One File Per Actor work in UE 5.5?", "should_trigger": false},
+  {"query": "How do I set up OmniMech Omnipods in the MW5 Clans Editor?", "should_trigger": false},
+  {"query": "What's the best way to structure a React component library?", "should_trigger": false},
+  {"query": "How do I configure a Postgres connection pool from Node.js?", "should_trigger": false},
+  {"query": "How do I package and export a MW5 Clans mod to Steam Workshop?", "should_trigger": false},
+  {"query": "What Blueprint soft-reference pattern does BP_KelMissionScript_Base use in Clans?", "should_trigger": false},
+  {"query": "How do I check if my currently-running MW5 Mercs Mod Editor session is still compiling shaders?", "should_trigger": false}
+]

@@ -1,0 +1,25 @@
+{
+  "name": "mechwarrior5-modding-marketplace",
+  "owner": {
+    "name": "moddingisthegame",
+    "email": "battletech@wardsylvania.us",
+    "url": "https://github.com/moddingisthegame/claude-skills-for-mechwarrior5-modding"
+  },
+  "description": "Claude skills for modding MechWarrior 5: Mercenaries and MechWarrior 5: Clans.",
+  "plugins": [
+    {
+      "name": "mw5mercs-modding",
+      "source": "./plugins/mw5mercs-modding",
+      "description": "Reference skills for modding MechWarrior 5: Mercenaries (Mod Editor, mission scripting, campaign integration) and the underlying Unreal Engine 4 (4.23.1) concepts it's built on.",
+      "category": "modding",
+      "keywords": ["mechwarrior5", "mw5mercs", "unreal-engine-4", "ue4", "modding"]
+    },
+    {
+      "name": "mw5clans-modding",
+      "source": "./plugins/mw5clans-modding",
+      "description": "Reference skills for modding MechWarrior 5: Clans (Clans Editor, Mod Manager, mission scripting, OmniMech setup, Wwise audio) and the underlying Unreal Engine 5 (5.5.4) concepts it's built on.",
+      "category": "modding",
+      "keywords": ["mechwarrior5", "mw5clans", "unreal-engine-5", "ue5", "modding"]
+    }
+  ]
+}

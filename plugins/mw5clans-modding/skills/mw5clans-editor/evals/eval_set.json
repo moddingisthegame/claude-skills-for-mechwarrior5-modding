@@ -1,0 +1,22 @@
+[
+  {"query": "How do I create a new mod in the MW5 Clans Editor's Mod Manager?", "should_trigger": true},
+  {"query": "What does the KEL Mod Mission Setup guide say about the Waypoint Objective trigger?", "should_trigger": true},
+  {"query": "How do I set up a Holotable trigger for my Clans campaign mission?", "should_trigger": true},
+  {"query": "I want to add a new OmniMech variant for the Stormcrow in Clans — how do Omnipods and the Loadout asset fit together?", "should_trigger": true},
+  {"query": "My Save To Mod override in the Clans Editor isn't taking effect after I edited the asset.", "should_trigger": true},
+  {"query": "How do I package my MW5 Clans mod and publish it to Steam Workshop?", "should_trigger": true},
+  {"query": "What Wwise version and plugins does MW5 Clans need for audio modding?", "should_trigger": true},
+  {"query": "How do turrets work in a Clans mission — regular, popup, and capture turrets?", "should_trigger": true},
+  {"query": "What is BP_KelMissionScript_Base and how do I subclass it for a new mission?", "should_trigger": true},
+  {"query": "I'm a MW5 Mercs modder trying Clans for the first time — what habits will actively mislead me?", "should_trigger": true},
+  {"query": "How do I create a substitution mod for a weapon in the MW5 Mercenaries Mod Editor?", "should_trigger": false},
+  {"query": "What fields does a Mission Flow Node have in MW5 Mercenaries?", "should_trigger": false},
+  {"query": "Explain how Lumen global illumination works in Unreal Engine 5.", "should_trigger": false},
+  {"query": "How do World Partition and One File Per Actor relate to each other in UE5?", "should_trigger": false},
+  {"query": "How do I set up a CI pipeline for a Python project on GitHub Actions?", "should_trigger": false},
+  {"query": "What's the difference between a struct and a class in C++?", "should_trigger": false},
+  {"query": "How do I install Unreal Engine 5.5 to start my own indie game project?", "should_trigger": false},
+  {"query": "Where can I find the official MW5 Mercenaries campaign editor documentation?", "should_trigger": false},
+  {"query": "What Gameplay Tags does MW5 Mercenaries use for mission objectives?", "should_trigger": false},
+  {"query": "How do NavMesh Bounds Volumes work in a generic Unreal Engine 4 project?", "should_trigger": false}
+]

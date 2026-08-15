@@ -1,0 +1,22 @@
+[
+  {"query": "Why does Lumen in the Clans Editor look softer on small objects than a typical UE5 project?", "should_trigger": true},
+  {"query": "Explain how World Partition and One File Per Actor relate to each other in UE 5.5.", "should_trigger": true},
+  {"query": "What's the difference between a Level Instance and a Packed Level Actor?", "should_trigger": true},
+  {"query": "Does the MW5 Clans Editor use Enhanced Input or the legacy UE4-style input mappings?", "should_trigger": true},
+  {"query": "How do Primary Data Assets and the Asset Manager work in Unreal Engine 5?", "should_trigger": true},
+  {"query": "What does AddToAssetSearchRoots do in a .uplugin descriptor?", "should_trigger": true},
+  {"query": "Is the GameplayAbilities plugin actually enabled in the MW5 Clans project?", "should_trigger": true},
+  {"query": "What UE5 rendering features does the Clans Editor actually have turned on — Nanite, hardware ray tracing?", "should_trigger": true},
+  {"query": "How do soft object references work in UE5 Blueprints for something like the Clans MissionScript?", "should_trigger": true},
+  {"query": "Explain Data Layers and how they relate to World Partition in UE 5.5.", "should_trigger": true},
+  {"query": "How do I subclass BP_KelMissionScript_Base and set up a Waypoint Objective?", "should_trigger": false},
+  {"query": "How do I package and publish my Clans mod to Steam Workshop?", "should_trigger": false},
+  {"query": "What UE4 Blueprint features does MW5 Mercenaries rely on?", "should_trigger": false},
+  {"query": "How do sublevels and the Foliage tool work in UE 4.23?", "should_trigger": false},
+  {"query": "How do I set up Mission Flow Nodes for a Mercs campaign arc?", "should_trigger": false},
+  {"query": "What's a good design pattern for a REST API in Node.js?", "should_trigger": false},
+  {"query": "How do I write a Python unit test with pytest fixtures?", "should_trigger": false},
+  {"query": "How do I install the MW5 Mercenaries Mod Editor?", "should_trigger": false},
+  {"query": "What Omnipod settings does the Loadout asset need for a new OmniMech variant?", "should_trigger": false},
+  {"query": "Explain UE 4.27's Landscape layer blending and paint layers.", "should_trigger": false}
+]
