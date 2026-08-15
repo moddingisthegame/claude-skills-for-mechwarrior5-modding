@@ -1,0 +1,87 @@
+name: Validate skills
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    # inputs below only matter to the `evals` job, which is currently
+    # commented out (see that job for why) — left here, also commented out,
+    # so re-enabling both together is a single uncomment rather than
+    # reconstructing this from scratch.
+    # inputs:
+    #   eval_runs:
+    #     description: "Times to repeat each eval query (majority vote)"
+    #     required: false
+    #     default: "1"
+    #   eval_model:
+    #     description: "Model id to use for trigger evals"
+    #     required: false
+    #     default: "haiku"
+
+permissions:
+  contents: read
+
+# Cancels an in-flight run when a newer push lands on the same branch, so
+# iterating quickly (push, fix, push again) doesn't pile up redundant runs
+# of `validate` (currently the only job that runs automatically — see the
+# note on the commented-out `evals` job below).
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Validate marketplace / plugin / skill syntax
+    runs-on: ubuntu-latest
+    # For a pull_request event, only run this for fork-originated PRs — a
+    # same-repo PR's commits already got validated by the `push` that put
+    # them on the branch, so running again here would just be the same
+    # redundant double-fire we deliberately dropped `pull_request` to avoid.
+    # Fork PRs have no other trigger that would ever validate them, hence
+    # the exception.
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name != github.repository
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - run: python scripts/validate_structure.py
+
+  # To re-enable in CI: uncomment this job, uncomment the `workflow_dispatch`
+  # inputs above, and add CLAUDE_CODE_OAUTH_TOKEN or ANTHROPIC_API_KEY as a
+  # repo secret.
+  #
+  # evals:
+  #   name: Run skill-trigger evals
+  #   needs: validate
+  #   runs-on: ubuntu-latest
+  #   # Never runs on a pull_request event at all, fork or not: a same-repo
+  #   # PR's commits are already covered by `push`, and fork PR runs never get
+  #   # secrets (GitHub withholds them from fork-authored code on purpose —
+  #   # this job would just hit run_evals.py's own no-credential skip anyway,
+  #   # so there's no point spinning up a runner and installing the CLI for
+  #   # that). This also means `validate` is never skipped when this job's
+  #   # condition allows it to run, so `needs: validate` always resolves.
+  #   if: github.event_name != 'pull_request'
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - uses: actions/setup-python@v5
+  #       with:
+  #         python-version: "3.12"
+  #     - run: pip install pyyaml
+  #     - name: Install Claude Code CLI
+  #       run: |
+  #         curl -fsSL https://claude.ai/install.sh | bash
+  #         echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+  #     - name: Run trigger evals through the CLI
+  #       env:
+  #         # Prefer a subscription token (claude setup-token) so this draws from
+  #         # plan usage instead of pay-per-token API billing; ANTHROPIC_API_KEY
+  #         # also works if that's what's configured instead. run_evals.py skips
+  #         # (exit 0) if neither secret is set.
+  #         CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+  #         ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+  #         EVAL_RUNS: ${{ github.event.inputs.eval_runs || '1' }}
+  #         EVAL_MODEL: ${{ github.event.inputs.eval_model || 'haiku' }}
+  #       run: python scripts/run_evals.py

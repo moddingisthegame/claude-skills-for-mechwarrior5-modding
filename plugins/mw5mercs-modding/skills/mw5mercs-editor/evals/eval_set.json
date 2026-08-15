@@ -1,0 +1,22 @@
+[
+  {"query": "How do I create a substitution mod for a weapon in the MW5 Mercenaries Mod Editor?", "should_trigger": true},
+  {"query": "What fields does a Mission Flow Node have in MW5 Mercenaries?", "should_trigger": true},
+  {"query": "How do I add a custom mission to a campaign arc in MW5 Mercs?", "should_trigger": true},
+  {"query": "My MW5 Mercs Mod Editor is open — can you check if it's still compiling shaders?", "should_trigger": true},
+  {"query": "What's an AreaSpec and how do I use it for a new Mercs mission?", "should_trigger": true},
+  {"query": "How do I register a Wwise project for the MW5 Mercenaries Mod Editor?", "should_trigger": true},
+  {"query": "Where can I find MW5 Mercenaries mods to install?", "should_trigger": true},
+  {"query": "What does the Mission Building Quick-Start guide say about markup sublevels?", "should_trigger": true},
+  {"query": "How does a Metagame Objective tie into a Campaign Arc in MW5 Mercs?", "should_trigger": true},
+  {"query": "I just packaged my Mercs mod — can you check the editor log for new errors?", "should_trigger": true},
+  {"query": "How do I create a new mod in the MW5 Clans Editor's Mod Manager?", "should_trigger": false},
+  {"query": "What is BP_KelMissionScript_Base used for in Clans?", "should_trigger": false},
+  {"query": "Explain how Gameplay Tags and Config/Tags ini files work in Unreal Engine 4 in general.", "should_trigger": false},
+  {"query": "What does UPrimaryDataAsset do in Unreal Engine 4?", "should_trigger": false},
+  {"query": "How do I set up OmniMech Omnipods and a Loadout in the Clans Editor?", "should_trigger": false},
+  {"query": "How do I write a GitHub Actions workflow for a Node.js project?", "should_trigger": false},
+  {"query": "What's the syntax for a Python dataclass with default values?", "should_trigger": false},
+  {"query": "How does World Partition work in UE 5.5?", "should_trigger": false},
+  {"query": "How do I package and publish a mod to Steam Workshop for MW5: Clans?", "should_trigger": false},
+  {"query": "Explain how NavMesh Bounds Volumes work as a general UE4 concept, not tied to any specific mod.", "should_trigger": false}
+]
